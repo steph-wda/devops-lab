@@ -11,7 +11,6 @@ app.use(cors())
 app.use(express.static(path.join(__dirname, "/../public")));
 
 app.get("/", (req, res) => {
-    rollbar.info(`user accessed the main page`)
     res.sendFile(path.resolve("public/landing.html"));
   });
 
